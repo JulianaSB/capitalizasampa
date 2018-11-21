@@ -181,14 +181,15 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-4">
-            <form>
+
+            <form  onsubmit="event.preventDefault();">
               <div class="form-group">
                 <input type="text" class="form-control" id="nome" placeholder="Nome">
               </div>
               <div class="form-group">
                 <input type="email" class="form-control" id="email" placeholder="Email">
               </div>
-              <button type="button" class="btn btn-outline-primary" style="background: #fff;border: none;padding: 10px 45px 10px 45px;">Enviar</button>
+              <button type="button" class="btn btn-outline-primary" style="background: #fff;border: none;padding: 10px 45px 10px 45px;" id='submit-button'>Enviar</button>
             </form>
           </div>
         </div>
@@ -210,6 +211,28 @@
 
     <!-- Custom scripts for this template -->
     <script src="js/new-age.min.js"></script>
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase-database.js"></script>
+
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDFkJBYA7CoQ0DNeOVkrBV9xqbbBbMKhKY",
+    authDomain: "capitaliza-b356c.firebaseapp.com",
+    databaseURL: "https://capitaliza-b356c.firebaseio.com",
+    projectId: "capitaliza-b356c",
+    storageBucket: "capitaliza-b356c.appspot.com",
+    messagingSenderId: "154469853840"
+  };
+  firebase.initializeApp(config);
+</script>
+<script src="scripts/main.js"></script>
+
+
 
   </body>
 
